@@ -1,0 +1,41 @@
+{
+    "name": "alathazal/starforged-laravel",
+    "description": "Laravel service providers for the alathazal/starforged-php data wrapper",
+    "type": "library",
+    "scripts": {
+        "test": "pest"
+    },
+    "require": {
+        "php": "^8.4",
+        "illuminate/support": "^13",
+        "alathazal/starforged-php": "^0.1.0",
+        "spatie/laravel-data": "^4.23"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alathazal\\StarforgedLaravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^11.2",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alathazal\\StarforgedLaravel\\StarforgedServiceProvider"
+            ]
+        }
+    }
+}
