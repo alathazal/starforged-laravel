@@ -29,8 +29,22 @@ pest()->extend(TestCase::class)
 |
 */
 
-expect()->extend('toBeOne', function () {
-    return $this->toBe(1);
+expect()->extend('toBeIntOrNull', function () {
+    expect(
+        is_null($this->value) || is_int($this->value)
+    )->toBeTrue();
+        
+
+    return $this;
+});
+
+expect()->extend('toBeStringOrNull', function () {
+    expect(
+        is_null($this->value) || is_string($this->value)
+    )->toBeTrue();
+        
+
+    return $this;
 });
 
 /*

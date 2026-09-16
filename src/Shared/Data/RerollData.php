@@ -9,7 +9,7 @@ final class RerollData extends Data
 {
     public function __construct(
         #[MapInputName('Text')]
-        public string $text,
+        public ?string $text,
 
         #[MapInputName('Dice')]
         public string $dice,

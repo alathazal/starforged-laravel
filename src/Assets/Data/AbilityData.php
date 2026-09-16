@@ -18,31 +18,27 @@ class AbilityData extends Data
         #[MapInputName('Text')]
         public string $text,
 
-        #[MapInputName('Enabled')]
-        public bool $enabled,
-
-        /** Ironsworn companion assets provide names for their abilities; Starforged abilities do not. */
-        #[MapInputName('Name')]
-        public ?string $name = null,
-
         #[MapInputName('Alter Moves')]
         #[DataCollectionOf(AlterMoveData::class)]
-        public DataCollection|Optional $alterMoves = new Optional,
+        public DataCollection|Optional $alterMoves,
+
+        #[MapInputName('Enabled')]
+        public bool $enabled,        
 
         /** New moves added by this asset ability. */
         #[MapInputName('Moves')]
         #[DataCollectionOf(MoveData::class)]
-        public DataCollection|Optional $moves = new Optional,
+        public DataCollection|Optional $moves,
 
         /** @var AssetInputData[] */
         #[MapInputName('Inputs')]
         #[DataCollectionOf(AssetInputData::class)]
-        public DataCollection|Optional $inputs = new Optional,
+        public DataCollection|Optional $inputs,
 
         #[MapInputName('Alter Properties')]
-        public AssetAlterPropertiesData|Optional $alterProperties = new Optional,
+        public AssetAlterPropertiesData|Optional $alterProperties,
 
         #[MapInputName('Alter Momentum')]
-        public AlterMomentumData|Optional $alterMomentum = new Optional,
+        public AlterMomentumData|Optional $alterMomentum,
     ) {}
 }

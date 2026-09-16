@@ -7,6 +7,7 @@ use Alathazal\StarforgedLaravel\Shared\Data\SourceData;
 use Alathazal\StarforgedLaravel\Shared\Data\SuggestionsData;
 use Spatie\LaravelData\Attributes\MapInputName;
 use Spatie\LaravelData\Data;
+use Spatie\LaravelData\Optional;
 
 class MoveData extends Data
 {
@@ -14,9 +15,9 @@ class MoveData extends Data
         #[MapInputName('$id')]
         public string $id,
 
-        public string $name,
+        public string|Optional $name,
 
-        public string $category,
+        public string|Optional $category,
 
         public bool $optional = false,
 

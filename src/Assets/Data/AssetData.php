@@ -31,33 +31,33 @@ class AssetData extends Data
         #[MapInputName('Usage')]
         public AssetUsageData $usage,
 
-        // #[MapInputName('Attachments')]
-        // public AssetAttachmentData|Optional $attachments,
+        #[MapInputName('Attachments')]
+        public AssetAttachmentData|Optional $attachments,
 
-        // #[MapInputName('Inputs')]
-        // #[DataCollectionOf(AssetInputData::class)]
-        // public DataCollection|Optional $inputs,
+        #[MapInputName('Inputs')]
+        #[DataCollectionOf(AssetInputData::class)]
+        public DataCollection|Optional $inputs,
 
-        // /** @var AbilityData[] */
-        // #[MapInputName('Abilities')]
-        // #[DataCollectionOf(AbilityData::class)]
-        // public DataCollection $abilities,
+        /** @var AbilityData[] */
+        #[MapInputName('Abilities')]
+        #[DataCollectionOf(AbilityData::class)]
+        public DataCollection $abilities,
 
-        // #[MapInputName('Condition Meter')]
-        // public ?ConditionMeterData $conditionMeter = null,
+        #[MapInputName('Condition Meter')]
+        public ConditionMeterData|Optional $conditionMeter,
 
-        // /** @var AssetStateData[] */
-        // #[MapInputName('States')]
-        // #[DataCollectionOf(AssetStateData::class)]
-        // public DataCollection|Optional $states = new Optional,
+        /** @var AssetStateData[] */
+        #[MapInputName('States')]
+        #[DataCollectionOf(AssetStateData::class)]
+        public DataCollection|Optional $states = new Optional,
 
-        // #[MapInputName('Requirement')]
-        // public ?string $requirement = null,
+        #[MapInputName('Requirement')]
+        public ?string $requirement = null,
 
-        // #[MapInputName('Tags')]
-        // public array $tags = [],
+        #[MapInputName('Tags')]
+        public array $tags = [],
 
-        // #[MapInputName('Aliases')]
-        // public array $aliases = [],
+        #[MapInputName('Aliases')]
+        public array $aliases = [],
     ) {}
 }

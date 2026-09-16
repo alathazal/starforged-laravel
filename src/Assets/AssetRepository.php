@@ -4,6 +4,7 @@ namespace Alathazal\StarforgedLaravel\Assets;
 
 use Alathazal\StarforgedLaravel\Shared\BaseRepository;
 use Alathazal\StarforgedLaravel\Assets\Data\AssetData;
+use Alathazal\StarforgedLaravel\AssetTypes\AssetTypes;
 use Alathazal\StarforgedPhp\StarforgedPhp;
 use InvalidArgumentException;
 

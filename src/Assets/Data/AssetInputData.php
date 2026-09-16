@@ -49,9 +49,15 @@ class AssetInputData extends Data
 
         // Select input
         #[MapInputName('Sets')]
-        public array $sets = [],
+        public ?array $sets = null,
 
         #[MapInputName('Options')]
-        public array $options = [],
+        public ?array $options = null,
+
+        #[MapInputName('Key')]
+        public ?string $key = null,
+
+        #[MapInputName('Type')]
+        public ?string $type = null,
     ) {}
 }
