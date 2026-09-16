@@ -1,10 +1,10 @@
 <?php
 
-namespace Alathazal\DataforgedLaravel\Truths\Data;
+namespace Alathazal\StarforgedLaravel\Truths\Data;
 
-use Alathazal\DataforgedLaravel\Shared\Data\DisplayData;
-use Alathazal\DataforgedLaravel\Shared\Data\SourceData;
-use Alathazal\DataforgedLaravel\Shared\Data\SuggestionsData;
+use Alathazal\StarforgedLaravel\Shared\Data\DisplayData;
+use Alathazal\StarforgedLaravel\Shared\Data\SourceData;
+use Alathazal\StarforgedLaravel\Shared\Data\SuggestionsData;
 use Spatie\LaravelData\Attributes\MapInputName;
 use Spatie\LaravelData\Data;
 

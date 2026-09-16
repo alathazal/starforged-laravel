@@ -1,17 +1,17 @@
 <?php
 
-namespace Alathazal\DataforgedLaravel\Assets\Data;
+namespace Alathazal\StarforgedLaravel\Shared\Data;
 
 use Spatie\LaravelData\Attributes\MapInputName;
 use Spatie\LaravelData\Data;
 
-class AlterMoveTriggerByData extends Data
+final class TriggerByData extends Data
 {
     public function __construct(
         #[MapInputName('Player')]
-        public bool $player,
+        public bool $player = true,
 
         #[MapInputName('Ally')]
-        public bool $ally,
+        public bool $ally = false,
     ) {}
 }

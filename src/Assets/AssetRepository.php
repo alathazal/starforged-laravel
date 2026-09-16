@@ -1,10 +1,10 @@
 <?php
 
-namespace Alathazal\DataforgedLaravel\Assets;
+namespace Alathazal\StarforgedLaravel\Assets;
 
-use Alathazal\DataforgedLaravel\Shared\BaseRepository;
-use Alathazal\DataforgedLaravel\Assets\Data\AssetData;
-use Alathazal\DataforgedPhp\Dataforged;
+use Alathazal\StarforgedLaravel\Shared\BaseRepository;
+use Alathazal\StarforgedLaravel\Assets\Data\AssetData;
+use Alathazal\StarforgedPhp\StarforgedPhp;
 use InvalidArgumentException;
 
 /**
@@ -13,7 +13,7 @@ use InvalidArgumentException;
 class AssetRepository extends BaseRepository
 {
     public function __construct(
-        protected Dataforged $dataforged,
+        protected StarforgedPhp $Starforged,
     ) {}
 
     protected function dto(array $record): AssetData
@@ -44,11 +44,7 @@ class AssetRepository extends BaseRepository
 
     protected function dataset(): array
     {
-        return collect($this->dataforged->assets())
-            ->flatMap(
-                fn (array $type) => $type['Assets']
-            )
-            ->all();
+        return $this->Starforged->assets();
     }
 
     /**

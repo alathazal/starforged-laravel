@@ -3,7 +3,7 @@
 namespace Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use Alathazal\DataforgedLaravel\DataforgedServiceProvider;
+use Alathazal\StarforgedLaravel\StarforgedServiceProvider;
 use Spatie\LaravelData\LaravelDataServiceProvider;
 
 abstract class TestCase extends Orchestra
@@ -18,7 +18,7 @@ abstract class TestCase extends Orchestra
     {
         return [
             LaravelDataServiceProvider::class,
-            DataforgedServiceProvider::class,
+            StarforgedServiceProvider::class,
         ];
     }
 }

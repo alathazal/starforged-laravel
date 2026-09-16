@@ -1,6 +1,6 @@
 {
     "name": "alathazal/starforged-laravel",
-    "description": "Laravel service providers for the alathazal/starforged-php data wrapper",
+    "description": "Laravel service provider for the alathazal/starforged-php data wrapper",
     "type": "library",
     "scripts": {
         "test": "pest"
@@ -8,7 +8,7 @@
     "require": {
         "php": "^8.4",
         "illuminate/support": "^13",
-        "alathazal/starforged-php": "^0.1.0",
+        "alathazal/starforged-php": "^1.0.0",
         "spatie/laravel-data": "^4.23"
     },
     "autoload": {

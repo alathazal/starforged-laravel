@@ -1,10 +1,10 @@
 <?php
 
-namespace Alathazal\DataforgedLaravel\Truths;
+namespace Alathazal\StarforgedLaravel\Truths;
 
-use Alathazal\DataforgedLaravel\Shared\BaseRepository;
-use Alathazal\DataforgedLaravel\Truths\Data\TruthData;
-use Alathazal\DataforgedPhp\Dataforged;
+use Alathazal\StarforgedLaravel\Shared\BaseRepository;
+use Alathazal\StarforgedLaravel\Truths\Data\TruthData;
+use Alathazal\StarforgedPhp\StarforgedPhp;
 use InvalidArgumentException;
 
 /**
@@ -13,7 +13,7 @@ use InvalidArgumentException;
 class TruthRepository extends BaseRepository
 {
     public function __construct(
-        protected Dataforged $dataforged,
+        protected StarforgedPhp $starforged,
     ) {}
 
     protected function dto(array $record): TruthData
@@ -36,6 +36,6 @@ class TruthRepository extends BaseRepository
 
     protected function dataset(): array
     {
-        return $this->dataforged->truths();
+        return $this->starforged->truths();
     }
 }

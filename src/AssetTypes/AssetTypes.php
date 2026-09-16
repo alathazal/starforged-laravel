@@ -1,6 +1,6 @@
 <?php
 
-namespace Alathazal\DataforgedLaravel\Assets;
+namespace Alathazal\StarforgedLaravel\AssetTypes;
 
 enum AssetTypes: string
 {

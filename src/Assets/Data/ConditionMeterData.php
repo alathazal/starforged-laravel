@@ -1,6 +1,6 @@
 <?php
 
-namespace Alathazal\DataforgedLaravel\Assets\Data;
+namespace Alathazal\StarforgedLaravel\Assets\Data;
 
 use Spatie\LaravelData\Attributes\MapInputName;
 use Spatie\LaravelData\Data;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Alathazal\DataforgedLaravel\Shared;
+namespace Alathazal\StarforgedLaravel\Shared;
 
 use InvalidArgumentException;
 

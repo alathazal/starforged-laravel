@@ -1,6 +1,6 @@
 <?php
 
-namespace Alathazal\DataforgedLaravel\Shared\Data;
+namespace Alathazal\StarforgedLaravel\Shared\Data;
 
 use Spatie\LaravelData\Data;
 

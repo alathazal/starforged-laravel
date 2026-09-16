@@ -1,9 +1,9 @@
 <?php
 
-namespace Alathazal\DataforgedLaravel\Assets\Data;
+namespace Alathazal\StarforgedLaravel\Assets\Data;
 
-use Alathazal\DataforgedLaravel\Shared\Data\DisplayData;
-use Alathazal\DataforgedLaravel\Shared\Data\SourceData;
+use Alathazal\StarforgedLaravel\Shared\Data\DisplayData;
+use Alathazal\StarforgedLaravel\Shared\Data\SourceData;
 use Spatie\LaravelData\Attributes\DataCollectionOf;
 use Spatie\LaravelData\Attributes\MapInputName;
 use Spatie\LaravelData\Data;

@@ -1,14 +1,14 @@
 <?php
 
-namespace Alathazal\DataforgedLaravel\Assets\Data;
+namespace Alathazal\StarforgedLaravel\Assets\Data;
 
-use Alathazal\DataforgedLaravel\Shared\Data\DisplayData;
-use Alathazal\DataforgedLaravel\Shared\Data\SourceData;
-use Spatie\LaravelData\Attributes\DataCollectionOf;
 use Spatie\LaravelData\Attributes\MapInputName;
 use Spatie\LaravelData\Data;
-use Spatie\LaravelData\DataCollection;
 
+/**
+ * Represents an asset input control. Covers all of Text, Number, Clock and
+ * Select input types; fields not relevant to a given `inputType` are null.
+ */
 class AssetInputData extends Data
 {
     public function __construct(
@@ -22,6 +22,36 @@ class AssetInputData extends Data
         public string $inputType,
 
         #[MapInputName('Adjustable')]
-        public bool $adjustable
+        public bool $adjustable,
+
+        // Number input
+        #[MapInputName('Min')]
+        public ?int $min = null,
+
+        #[MapInputName('Max')]
+        public ?int $max = null,
+
+        #[MapInputName('Step')]
+        public ?int $step = null,
+
+        #[MapInputName('Value')]
+        public ?int $value = null,
+
+        // Clock input
+        #[MapInputName('Clock Type')]
+        public ?string $clockType = null,
+
+        #[MapInputName('Segments')]
+        public ?int $segments = null,
+
+        #[MapInputName('Filled')]
+        public ?int $filled = null,
+
+        // Select input
+        #[MapInputName('Sets')]
+        public array $sets = [],
+
+        #[MapInputName('Options')]
+        public array $options = [],
     ) {}
 }
