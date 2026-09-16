@@ -2,6 +2,7 @@
     "name": "alathazal/starforged-laravel",
     "description": "Laravel service provider for the alathazal/starforged-php data wrapper",
     "type": "library",
+    "license": "MIT",
     "scripts": {
         "test": "pest"
     },
