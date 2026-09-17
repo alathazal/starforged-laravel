@@ -187,7 +187,7 @@ describe('DTO Hydration', function () {
         }
     });
 
-    it('hydrates Asset->SourceData DTO correctly', function () {
+    it('can hydrate all Asset->SourceData against DTO correctly', function () {
         $assets = $this->repository->all();
 
         foreach ($assets as $asset) {
@@ -199,7 +199,7 @@ describe('DTO Hydration', function () {
         }
     });
 
-    it('hydrates Asset->DisplayData DTO correctly', function () {
+    it('can hydrate all Asset->DisplayData against DTO correctly', function () {
         $assets = $this->repository->all();
 
         foreach ($assets as $asset) {
@@ -210,7 +210,7 @@ describe('DTO Hydration', function () {
         }
     });
 
-    it('hydrates Asset->UsageData DTO correctly', function () {
+    it('can hydrate all Asset->UsageData against DTO correctly', function () {
         $assets = $this->repository->all();
 
         foreach ($assets as $asset) {
@@ -220,7 +220,7 @@ describe('DTO Hydration', function () {
         }
     });
 
-    it('hydrates Asset->AttachmentsData DTO correctly', function () {
+    it('can hydrate all Asset->AttachmentsData against DTO correctly', function () {
         $assets = $this->repository->all();
 
         foreach ($assets as $asset) {
@@ -235,7 +235,7 @@ describe('DTO Hydration', function () {
         }
     });
 
-    it('hydrates Asset->InputsData DTO correctly', function () {
+    it('can hydrate all Asset->InputsData against DTO correctly', function () {
         $assets = $this->repository->all();
 
         foreach ($assets as $asset) {
@@ -259,6 +259,19 @@ describe('DTO Hydration', function () {
                                 ->and($e->value->segments)->toBeIntOrNull()
                                 ->and($e->value->filled)->toBeIntOrNull()
                         );
+            }
+        }
+    });
+
+    it('can hydrate all Asset->ConditionMeterData against DTO correctly', function () {
+        $assets = $this->repository->all();
+
+        foreach ($assets as $asset) {
+            if ((isset($asset->conditionMeter) && !($asset->conditionMeter instanceof Optional))
+                || $asset->conditionMeter instanceof ConditionMeterData) {
+
+                expect($asset->conditionMeter)
+                    ->toBeInstanceOf(ConditionMeterData::class);
             }
         }
     });
